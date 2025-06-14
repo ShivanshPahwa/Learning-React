@@ -1,4 +1,17 @@
 #heading {
   color: #e3419f;
 }
+
+.card {
+  border: 1px solid #000;
+  margin: 20px;
+}
+
+.banner-container {
+  display: flex;
+}
+
+.card-image {
+  margin: 9px;
+}
 /*# sourceMappingURL=Learning-React.9e4c6fd2.css.map */

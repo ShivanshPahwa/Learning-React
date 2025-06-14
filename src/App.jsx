@@ -1,9 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Header from "./Components/Header";
+import { Footer } from "./Components/Footer";
+import Body from "./Components/Body";
+import AboutUs from "./Components/AboutUs";
 
-const heading = React.createElement('h1', { id: 'heading' }, 'Hello without index.jsx');
-const heading2 = <h2>this is another heading</h2>
-const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(heading);
-root.render(heading2);
+import "../index.css";
+const AppLayout = () => {
+  return (
+    <div className="container">
+      <Header />
 
+      <Body />
+
+      <Footer />
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const appRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppLayout />,
+  },
+  {
+    path: '/AboutUs',
+    element: <AboutUs/>
+  },
+]);
+root.render(<RouterProvider router={appRouter}/>);
