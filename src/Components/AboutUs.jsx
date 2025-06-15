@@ -1,9 +1,11 @@
-const AboutUs =()=>{
-    return(
-        <>
-        <h4>About Us</h4>
-        </>
-    )
+import React from 'react';
+
+class AboutUs extends React.Component{
+    render(){
+        return(
+            <h1>About us page</h1>
+        )
+    }
 }
 
-export default AboutUs
+export default AboutUs;

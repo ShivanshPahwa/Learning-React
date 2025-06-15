@@ -5,7 +5,7 @@ import { bannerData } from "../Utils/mockdata";
 const Banner = () => {
   return (
     <>
-      <div className="banner-container">
+      <div className="banner-container" style={{display:'flex'}}>
         {bannerData.map((cardData) => (
           <ProductList key={cardData.id} productData={cardData} />
         ))}
